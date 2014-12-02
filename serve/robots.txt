@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://maxarturoas.com/sitemap.xml 
