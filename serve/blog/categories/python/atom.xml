@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Python | Max Alcalá Sáinz]]></title>
+  <link href="http://maxarturoas.com/blog/categories/python/atom.xml" rel="self"/>
+  <link href="http://maxarturoas.com/"/>
+  <updated>2014-12-02T09:33:18-06:00</updated>
+  <id>http://maxarturoas.com/</id>
+  <author>
+    <name><![CDATA[Max Arturo Alcalá Sáinz]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Geocoding With Python]]></title>
+    <link href="http://maxarturoas.com/blog/2014/03/16/geocoding-with-python/"/>
+    <updated>2014-03-16T21:02:45-05:00</updated>
+    <id>http://maxarturoas.com/blog/2014/03/16/geocoding-with-python</id>
+    <content type="html"><![CDATA[<p>My girlfriend had an interesting problem for me over the weekend. She has a pretty cool job (she will tell you its rather dull) doing primary-source research for an art/production firm, and she needed to start plotting some arbitrary locations into a map. She wasn&rsquo;t sure yet what program she&rsquo;d use to do this, but we arrived at the conclusion that having a list of lat/long&rsquo;s would help her no matter what program she ended up using.</p>
+
+<p>For those like me that had no idea, <strong>Geocoding</strong> is the process of taking natural-language location descriptions and matching them to their corresponding latitude and longitude. <!-- more --> Google has an outstanding (and free!) API to get up to 2500 geocodings per day using its well-curated source of locations. The API usage is <a href="https://developers.google.com/maps/documentation/geocoding/">clearly documented</a>, as is tradition for Google, so it was a matter of quickly coding something up quick so that the GF could go on her merry way.</p>
+
+<p>The script ought to be straightforward:</p>
+
+<ol>
+<li>read some input file</li>
+<li>iterate over the list, calling the Google Maps API for each location and write the output to a file</li>
+<li>Profit</li>
+</ol>
+
+
+<p>Though I am a VBS man at heart, I wanted to do something different. In the spirit of owning my own progress as a programmer I&rsquo;ve decided to not use VBS or any other language I&rsquo;m comfortable with going forward, which is very refreshing. Python&rsquo;s legendary breadth of modules to do <a href="https://www.python.org/doc/humor/#shooting-yourself-in-the-foot">pretty much anything</a> is well known, and having done some Django before pushed me to go with it.</p>
+
+<p>What an amazing experience! Everything just <em>works</em>. In the process of writing up the script, I learned about setting up Virtualenv, generating the packaging install scripts, the top-notch <a href="http://docs.python-requests.org/en/latest/">requests module</a> and working wtih JSON to extract the data I needed. I really didn&rsquo;t think it would be this easy to interact with the different modules and goodies that Python includes by default. One part in specific that blew me away was the included <code>cmd</code> module to generate your very-own CLI for your program, just by <em>documenting your methods</em>. For example,
+``` python Self-building CLI</p>
+
+<pre><code>    def do_quit(self, args):
+        """Quits the program"""
+        print "Quitting."
+        raise SystemExit
+</code></pre>
+
+<p>```</p>
+
+<p>defines an argument within your CLI right after the method name <code>do_</code>. The help verbiage is the doc for the method, and the implemented superclass takes care of the looping.</p>
+
+<p><em>Brilliant</em>.</p>
+
+<p>No wonder everyone is going crazy about Python! I&rsquo;m very happy I ran into this just by having to make this rather simple script and it goes to show just how much more there is to learn. The script worked out and the GF was able to use it (granted I probably didn&rsquo;t need to add a CLI, but hey!!) and got brownie points for it. Not brownies, though. We&rsquo;re working on that.</p>
+
+<p>If you&rsquo;re interested in the script it&rsquo;s <a href="https://github.com/maxArturo/gMapsGeoCoder/blob/master/geocoder.py">here</a>, as well as on my github account on the side of the page. There are some silly assumptions about quotes as I was taking in Excel-formatted CSV files and such, but you could probably modify it and make it inifinitely better if you wanted to. Yes, I know there are wrappers for Google&rsquo;s API but – that would take out the fun!</p>
+
+<p><em>-Max</em></p>
+]]></content>
+  </entry>
+  
+</feed>
