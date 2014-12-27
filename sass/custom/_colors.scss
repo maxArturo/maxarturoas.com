@@ -2,12 +2,32 @@
 // To give it a try, uncomment some of the lines below rebuild your blog, and see how it works.
 // If you need a handy color picker try http://hslpicker.com
 
-//$header-bg: #263347;
+$color-primary-0: #313D6B;  /* Main Primary color */
+$color-primary-1: #737DA2;
+$color-primary-2: #4B5784;
+$color-primary-3: #1C2956;
+$color-primary-4: #0A143A;
+
+$color-secondary-1-0: #909B3B;  /* Main Secondary color (1) */
+$color-secondary-1-1: #E2EA9C;
+$color-secondary-1-2: #B5BF61;
+$color-secondary-1-3: #717B1D;
+$color-secondary-1-4: #4A5305;
+
+
+$header-bg: black;
+$footer-bg: $color-primary-0;
+$nav-bg: desaturate(lighten($color-primary-0, 18), 5);
+$nav-color: white;
+$nav-color-hover: $color-secondary-1-2;
+$link-color: $color-secondary-1-4;
+$sidebar-bg: $color-primary-1;
+$sidebar-color: lighten(invert($sidebar-bg), 45%);
+$sidebar-link-color: $sidebar-color;
 //$subtitle-color: lighten($header-bg, 58);
 //$nav-bg: desaturate(lighten(#8fc17a, 18), 5);
 //$nav-bg-front: image-url('noise.png');
 //$nav-bg-back: linear-gradient(lighten($nav-bg, 8), $nav-bg, darken($nav-bg, 11));
-//$sidebar-bg: desaturate(#eceff5, 8);
 //$sidebar-link-color: saturate(#526f9a, 10);
 //$sidebar-link-color-hover: darken(#7ab662, 9);
 //$footer-bg: #ccc !default;

@@ -1,5 +1,9 @@
 body > header {
-  background: $header-bg;
+  text-align: center;
+  @include profile-pic-resize(150px);
+  background: image-url('banner.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   h1 {
     display: inline-block;
     margin: 0;
