@@ -1,9 +1,15 @@
 body > header {
   text-align: center;
-  @include profile-pic-resize(150px);
-  background: image-url('banner.jpg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  @include header-sizes(175px, 'banner.jpg');
+
+  @media only screen and (max-width: 768px) {
+    @include header-sizes(150px, 'banner_med.jpg');
+  }
+
+  @media only screen and (max-width: 550px) {
+    @include header-sizes(125px, 'banner_small.jpg');
+  }
+
   h1 {
     display: inline-block;
     margin: 0;
@@ -18,5 +24,5 @@ body > header {
     font-size: 1em;
     color: $subtitle-color;
     font-weight: normal;
-  }
+  }  
 }

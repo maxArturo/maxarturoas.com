@@ -126,7 +126,6 @@ body.sidebar-footer {
 
 @media only screen and (min-width: 550px) {
   body > header { font-size: $header-font-size; }
-  @include profile-pic-resize(100px);
 }
 @media only screen and (min-width: 750px) {
   aside.sidebar { @include collapse-sidebar; }
@@ -137,7 +136,7 @@ body.sidebar-footer {
 @media only screen and (min-width: 768px) {
   body { -webkit-text-size-adjust: auto; }
   body > header { font-size: $header-font-size * 1.2; }
-  @include profile-pic-resize(150px);
+  
   #main {
     padding: 0;
     margin: 0 auto;

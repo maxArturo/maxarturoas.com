@@ -41,3 +41,8 @@
   @return $text-color;
 }
 
+@mixin header-sizes($profile-pic-diameter, $img){
+  @include profile-pic-resize($profile-pic-diameter);
+  background: image-url($img);
+  background-repeat: no-repeat;
+}
