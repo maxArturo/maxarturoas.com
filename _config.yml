@@ -110,5 +110,5 @@ assets:
   compress:
     js:   'yui'
     css:  'yui'
-  cachebust: none
+  cachebust: hard
   gzip: none
