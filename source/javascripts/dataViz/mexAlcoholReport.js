@@ -91,4 +91,4 @@ var drawChart = function(csvFile, chartSelector){
   });
 };
   
-drawChart("/assets/data/dataViz/alcoholTestHermosillo.csv", "div#chartMex");
+drawChart("/data/dataViz/alcoholTestHermosillo.csv", "div#chartMex");

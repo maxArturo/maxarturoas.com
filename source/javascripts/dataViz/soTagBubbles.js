@@ -8,7 +8,7 @@ var diameter = 600,
     tagJson = new Object(),
     svg;
 
-d3.json("/assets/data/dataViz/tags.json",function(data) {
+d3.json("/data/dataViz/tags.json",function(data) {
 
 	tagJson.children = data;
 

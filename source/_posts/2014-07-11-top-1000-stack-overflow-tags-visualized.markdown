@@ -62,7 +62,7 @@ GROUP BY TagTotals.TagName;
 That gives you a listing of the number of times a tag has been used in a post. It rolls in tag synonyms, so you get a good idea of the tag groupings. Then I made a JSON out of it and loaded it through d3.layout.pack() to get radii and coordinates for the relative sizes of the bubbles. The text is also scaled through radii for good proportionality:
 
 
-{% img /assets/images/tagCircles.jpg 'Tag Circles' %}
+{% img /images/tagCircles.jpg 'Tag Circles' %}
 
 Hope you like it!
 
