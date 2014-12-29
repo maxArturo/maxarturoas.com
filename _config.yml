@@ -98,3 +98,17 @@ google_analytics_tracking_id: "UA-50775648-1"
 
 # Facebook Like
 #facebook_like: true
+
+# Plugin: jekyll-assets
+assets:
+  dirname: assets
+  baseurl: /assets/
+  sources:
+    - _assets/javascripts
+    - _assets/stylesheets
+
+  compress:
+    js:   'yui'
+    css:  'yui'
+  cachebust: none
+  gzip: none
